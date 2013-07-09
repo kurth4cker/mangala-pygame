@@ -18,7 +18,7 @@ font2=pygame.font.Font(None,35)
 en=60
 boy=60
 def haznekutu(x,y):
-  return pygame.Rect(x,y,en,boy)
+	return pygame.Rect(x,y,en,boy)
 hk1=[None]*6
 hk2=[None]*6
 for i in range(0,6):
@@ -128,7 +128,7 @@ while not bitti:
 											s[6]+=s[12-son]+1
 											s[son]=0
 											s[12-son]=0
-								oyuncu_birinci=True
+									oyuncu_birinci=True
 								if sum(s[:6])==0:
 									s[6]+=sum(s[7:-1])
 									s[7:-1]=[0]*6
