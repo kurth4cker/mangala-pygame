@@ -93,7 +93,7 @@ while not bitti:
 								if son==13:
 									oyuncu_birinci=True
 								else:
-									if son in [0,5]:
+									if son in range(0,6):
 										if s[son]%2==0:
 											s[13]+=s[son]
 											s[son]=0
@@ -119,7 +119,7 @@ while not bitti:
 								if son==6:
 									oyuncu_birinci=False
 								else:
-									if son in [7,12]:
+									if son in range(7,13):
 										if s[son]%2==0:
 											s[6]+=s[son]
 											s[son]=0
