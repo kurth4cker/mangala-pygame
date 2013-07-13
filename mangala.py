@@ -59,7 +59,14 @@ def olustur():
 	ekran.blit(bilgi_yazi,((cozunurluk[0]-bx)/2,boy*4+8))
 	ekran.blit(bilgi_yazi2,((cozunurluk[0]-bx2)/2,boy*4+by+16))
 def fonkoyunbitti():
-	bittiyazi1=font2.render('Oyun Bitti',1,kirmizi)
+	durum='Oyun bitti.'
+	if s[13]>s[6]:
+		durum='Oyunu 1. oyuncu kazandı.'
+	elif s[13]<s[6]:
+		durum='Oyunu 2. oyuncu kazandı.'
+	else:
+		durum='Oyun berabere.'
+	bittiyazi1=font2.render(durum,1,kirmizi)
 	x1,y1=bittiyazi1.get_size()
 	bittiyazi2=font2.render('1. Oyuncu: '+str(s[13])+' 2. Oyuncu: '+str(s[6]),1,mavi)
 	x2,y2=bittiyazi2.get_size()
@@ -86,9 +93,9 @@ while not bitti:
 						if hk1[i].collidepoint(olay.pos):
 							gg=s[i+7]
 							if gg!=0:
-								for jj in range(1,gg+1):
+								for jj in range(0,gg):
 									s[(i+7+jj)%14]+=1
-									s[i+7]=0
+									s[i+7]=1
 								son=(i+7+jj)%14
 								if son==13:
 									oyuncu_birinci=True
@@ -112,9 +119,9 @@ while not bitti:
 						if hk2[i].collidepoint(olay.pos):
 							gg=s[5-i]
 							if gg!=0:
-								for jj in range(1,gg+1):
+								for jj in range(0,gg):
 									s[(5-i+jj)%14]+=1
-									s[5-i]=0
+									s[5-i]=1
 								son=(5-i+jj)%14
 								if son==6:
 									oyuncu_birinci=False
