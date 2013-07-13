@@ -61,9 +61,9 @@ def olustur():
 def fonkoyunbitti():
 	durum='Oyun bitti.'
 	if s[13]>s[6]:
-		durum='Oyunu 1. oyuncu kazandı.'
+		durum='Oyunu 1. oyuncu kazandi.'
 	elif s[13]<s[6]:
-		durum='Oyunu 2. oyuncu kazandı.'
+		durum='Oyunu 2. oyuncu kazandi.'
 	else:
 		durum='Oyun berabere.'
 	bittiyazi1=font2.render(durum,1,kirmizi)
