@@ -93,9 +93,9 @@ while not bitti:
 						if hk1[i].collidepoint(olay.pos):
 							gg=s[i+7]
 							if gg!=0:
-								for jj in range(0,gg):
+								for jj in range(1,gg+1):
 									s[(i+7+jj)%14]+=1
-									s[i+7]=1
+									s[i+7]=0
 								son=(i+7+jj)%14
 								if son==13:
 									oyuncu_birinci=True
@@ -119,9 +119,9 @@ while not bitti:
 						if hk2[i].collidepoint(olay.pos):
 							gg=s[5-i]
 							if gg!=0:
-								for jj in range(0,gg):
+								for jj in range(1,gg+1):
 									s[(5-i+jj)%14]+=1
-									s[5-i]=1
+									s[5-i]=0
 								son=(5-i+jj)%14
 								if son==6:
 									oyuncu_birinci=False
