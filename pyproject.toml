@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mangala"
+version = "0.0.0"
+authors = [
+    { name="Furkan USLU", email="mfuslu@anadolu.edu.tr" },
+    { name="kurth4cker", email="kurth4cker@gmail.com" },
+]
+description = "Turkish mangala game"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Natural Language :: Turkish",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Games/Entertainment :: Board Games",
+]
