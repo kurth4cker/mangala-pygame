@@ -62,7 +62,9 @@ def create():
         sirametin = "2"
     oyuncuyazi1 = font2.render("1.", 1, color_white)
     oyuncuyazi2 = font2.render("2.", 1, color_white)
-    bilgi_yazi = font2.render("Hamle sirasi " + sirametin + ". oyuncuda", 1, color_white)
+    bilgi_yazi = font2.render(
+        "Hamle sirasi " + sirametin + ". oyuncuda", 1, color_white
+    )
     bx, by = bilgi_yazi.get_size()
     bilgi_yazi2 = font2.render("Y: Yeni Oyun ESC: Cikis", 1, color_white)
     bx2, by2 = bilgi_yazi2.get_size()
